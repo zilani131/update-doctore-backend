@@ -12,7 +12,8 @@ app.use(express.json());
 // password:pWQKQN4z0PRUOdpP
 
 // const collection = client.db("test").collection("devices");
-const uri = `mongodb+srv://doctor_admin:pWQKQN4z0PRUOdpP@cluster0.miuys.mongodb.net/?retryWrites=true&w=majority`;
+// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.miuys.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.miuys.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 // should be declare out side the async function
